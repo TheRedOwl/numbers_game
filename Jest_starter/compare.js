@@ -1,4 +1,4 @@
-export const compare=(guessedNr,randomNr,valasz)=>{
+export const compare=(guessedNr,randomNr)=>{
     if(guessedNr==randomNr){
         valasz="Eltaláltad"
     }

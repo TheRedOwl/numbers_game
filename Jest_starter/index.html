@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <input type="text" class="guessedNumber">
         <button class="checkButton"></button>
     </div>
 
-    <script>
+    <script type="module">
+        import { compare } from "./compare.js";
+        import { generateRandomNR } from "./genrandNr.js";
+
         document.querySelector(".checkButton").addEventListener("click", check)
-        function check(){
+
+        generateRandomNR(1, 10)
+
+        function check() {
             console.log("click done");
+            var inputNumber = document.querySelector(".guessedNumber").value
+            console.log(inputNumber);
+            inputNumber = Number(inputNumber)
+            console.log(inputNumber);
+            if (isNaN(inputNumber) == true) {
+                console.log("Nem szám!");
+                return
+            }
+            console.log(inputNumber);
+
+
+
         }
     </script>
 </body>
+
 </html>
